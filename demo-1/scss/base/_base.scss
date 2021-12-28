@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // using % avoids hard-setting user font-size preferences (sets rem to 10px)
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}

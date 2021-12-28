@@ -1,0 +1,40 @@
+$color-primary: #5b622e;
+$color-secondary: #3f2b36;
+$color-tertiary: #434343;
+$color-warning: #ffb822;
+
+$color-primary-light: #a7b195;
+$color-secondary-light: #887d70;
+$color-tertiary-light: #acacac;
+$color-tertiary-dark: #2c2c2c;
+
+$color-grey: #777;
+$color-grey-light: #eee;
+$color-white: #fff;
+$color-black: #000;
+$color-green: #51ad1b;
+$color-red: #e53935;
+$color-off-white: rgb(255, 250, 245);
+
+$color-shadow: rgba(0, 0, 0, 0.3);
+
+$border-radius: 0.3rem;
+$border-radius__btn: 0.5rem;
+$btn__shadow: rgb(56, 56, 56);
+
+// font-size
+$default-fs: 1.6rem;
+
+// home page
+$home__hero-gradient: linear-gradient(
+  to right bottom,
+  rgba($color-primary, 0.4),
+  rgba($color-tertiary, 0.4),
+  rgba($color-secondary, 0.4)
+);
+$home__color-header-bg-backdrop: rgba(0, 0, 0, 0.164);
+
+// grid
+$grid__max-width: 114rem;
+$grid__gutter-horizontal: 1rem;
+$grid__gutter-vertical: 5rem;

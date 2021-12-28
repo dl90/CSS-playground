@@ -1,0 +1,30 @@
+.feature-card {
+  background-color: rgba($color-white, 0.8);
+  padding: 2rem;
+  border-radius: $border-radius;
+  font-size: 1.4rem;
+  text-align: center;
+  box-shadow: 0.2rem 1rem 1rem rgba($color-shadow, 0.5);
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05) translateY(-0.4rem);
+    box-shadow: 0.2rem 1rem 1rem rgba($color-shadow, 0.8);
+    background-color: rgba($color-white, 0.9);
+  }
+
+  &__icon {
+    font-size: 9rem;
+    margin-bottom: 1rem;
+
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary,
+      $color-secondary
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}

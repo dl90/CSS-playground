@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+
+    <title>Demo 1</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <input type="checkbox" id="nav-toggle" class="navigation__checkbox" />
+      <label for="nav-toggle" class="navigation__btn u-unselectable">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__bg">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="javascript:void(0);" class="navigation__link">About</a>
+          </li>
+          <li class="navigation__item">
+            <a href="javascript:void(0);" class="navigation__link">Features</a>
+          </li>
+          <li class="navigation__item">
+            <a href="javascript:void(0);" class="navigation__link">Tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="javascript:void(0);" class="navigation__link">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="javascript:void(0);" class="navigation__link">Booking</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header">
+      <div class="header__logo-container">
+        <img
+          class="header__logo"
+          src="assets/logo-white.png"
+          alt="logo"
+          draggable="false"
+        />
+      </div>
+
+      <div class="header__content u-unselectable">
+        <div class="header__content-bg">
+          <h1 class="heading-h1">
+            <span class="heading-h1--main">Never trust atoms</span>
+            <span class="heading-h1--sub">they make up everything</span>
+          </h1>
+          <a href="javascript:void(0);" class="btn btn--primary animate--up"
+            >Discover below</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <details>
+      <summary class="u-unselectable">Grid example</summary>
+      <section class="float-grid__example">
+        <div class="row">
+          <div class="col-1-of-2">col 1-2</div>
+          <div class="col-1-of-2">col 1-2</div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-3">col 1-3</div>
+          <div class="col-1-of-3">col 1-3</div>
+          <div class="col-1-of-3">col 1-3</div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-3">col 1-3</div>
+          <div class="col-2-of-3">col 2-3</div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-4">col 1-4</div>
+          <div class="col-1-of-4">col 1-4</div>
+          <div class="col-1-of-4">col 1-4</div>
+          <div class="col-1-of-4">col 1-4</div>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-4">col 1-4</div>
+          <div class="col-1-of-4">col 1-4</div>
+          <div class="col-2-of-4">col 2-4</div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-4">col 1-4</div>
+          <div class="col-3-of-4">col 3-4</div>
+        </div>
+      </section>
+    </details>
+
+    <main>
+      <section class="about">
+        <div class="u-text-center">
+          <h2 class="heading-h2 u-my-8 u-mx-6">
+            Behind every good program is a frustrated programmer.
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-1-of-2">
+            <h3 class="heading-h3 u-mb-2">
+              Why was the developer bankrupt? He used all his cache.
+            </h3>
+            <p class="p">
+              "It should be noted that no ethically-trained software engineer
+              would ever consent to write a DestroyBaghdad procedure. Basic
+              professional ethics would instead require him to write a
+              DestroyCity procedure, to which Baghdad could be given as a
+              parameter." - Nathaniel Borenstein
+            </p>
+
+            <h3 class="heading-h3 u-mb-2">
+              A friend is in a band called 1023Mb. They haven't had a gig yet.
+            </h3>
+            <p class="p">
+              A man came into work, and one of his co-workers had a parrot on
+              his shoulder. All though the morning, the bird would squawk and
+              say, "pieces of seven, pieces of seven". Finally he could stand it
+              no longer and went to the co-worker's cubicle. "Shouldn't it be
+              'pieces of eight'?", he asked. "Oh, that's a parroty error".
+            </p>
+
+            <a href="javascript:void(0);" class="btn-text">Activate &rarr;</a>
+          </div>
+
+          <div class="col-1-of-2">
+            <div class="composition">
+              <img
+                src="assets/nat-1-large.jpg"
+                alt="image 1"
+                class="composition__img composition__img--p1"
+              /><img
+                src="assets/nat-2-large.jpg"
+                alt="image 2"
+                class="composition__img composition__img--p2"
+              /><img
+                src="assets/nat-3-large.jpg"
+                alt="image 3"
+                class="composition__img composition__img--p3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="row">
+          <div class="col-1-of-4">
+            <div class="feature-card">
+              <span
+                class="material-icons-sharp feature-card__icon u-unselectable"
+              >
+                android
+              </span>
+              <h3 class="heading-h3 u-mb-1">Mobile</h3>
+              <p class="feature-card__text">
+                A fool can write a code that a computer can understand. Good
+                programmers write code that they also don't understand after few
+                days.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-card">
+              <span
+                class="material-icons-sharp feature-card__icon u-unselectable"
+              >
+                smart_toy
+              </span>
+              <h3 class="heading-h3 u-mb-1">Automation</h3>
+              <p class="feature-card__text">
+                A programmer puts two glasses on his bedside table before going
+                to sleep. A full one, in case he gets thirsty, and an empty one,
+                in case he doesn't.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-card">
+              <span
+                class="material-icons-sharp feature-card__icon u-unselectable"
+              >
+                lock_clock
+              </span>
+              <h3 class="heading-h3 u-mb-1">Secure</h3>
+              <p class="feature-card__text">
+                A journalist asked a programmer:-what makes code bad?
+                Programmer:- No comment
+              </p>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="feature-card">
+              <span
+                class="material-icons-sharp feature-card__icon u-unselectable"
+              >
+                sentiment_very_satisfied
+              </span>
+              <h3 class="heading-h3 u-mb-2">Satisfaction</h3>
+              <p class="feature-card__text">
+                Why do programmers have bad digestion? &#13; They only have
+                semi-colons&#8230;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tours">
+        <div class="u-text-center">
+          <h2 class="heading-h2 u-my-8 u-mx-6" id="tours">
+            A successful programmer is a PRO in GRAMMAR!
+          </h2>
+
+          <div class="row">
+            <div class="col-1-of-3">
+              <div class="flip-card tours__card-1">
+                <div class="flip-card__side flip-card__side--front">
+                  <div class="flip-card__img">&nbsp;</div>
+                  <h4 class="flip-card__heading">
+                    <span> Unortho-Docks </span>
+                  </h4>
+                  <div class="flip-card__content">
+                    <ul>
+                      <li>How do you tell HTML from HTML5?</li>
+                      <li>Try it out in Internet Explorer.</li>
+                      <li>Did it work?</li>
+                      <li>No?</li>
+                      <li>It's HTML5.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="flip-card__side flip-card__side--back">
+                  <div class="flip-card__cta">
+                    <p class="flip-card__cta-title">Monthly</p>
+                    <p class="flip-card__cta-desc">$12</p>
+                    <a href="#modal" class="btn btn--white">Subscribe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1-of-3">
+              <div class="flip-card tours__card-2">
+                <div class="flip-card__side flip-card__side--front">
+                  <div class="flip-card__img">&nbsp;</div>
+                  <h4 class="flip-card__heading">
+                    <span> FLOTUS </span>
+                  </h4>
+                  <div class="flip-card__content">
+                    <ul>
+                      <li>Knock knock.</li>
+                      <li>Whos there?</li>
+                      <li>Broken state machine.</li>
+                      <li>Broken state machine who?</li>
+                      <li>Knock knock.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="flip-card__side flip-card__side--back">
+                  <div class="flip-card__cta">
+                    <p class="flip-card__cta-title">Annually</p>
+                    <p class="flip-card__cta-desc">$120</p>
+                    <a href="#modal" class="btn btn--white">Subscribe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1-of-3">
+              <div class="flip-card tours__card-3">
+                <div class="flip-card__side flip-card__side--front">
+                  <div class="flip-card__img">&nbsp;</div>
+                  <h4 class="flip-card__heading">
+                    <span> Usain Boat </span>
+                  </h4>
+                  <div class="flip-card__content">
+                    <ul>
+                      <li>Error 404:</li>
+                      <li>Your haiku could not be found.</li>
+                      <li>Try again later.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="flip-card__side flip-card__side--back">
+                  <div class="flip-card__cta">
+                    <p class="flip-card__cta-title">Lifetime</p>
+                    <p class="flip-card__cta-desc">$200</p>
+                    <a href="#modal" class="btn btn--white">Subscribe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-text-center u-mt-10">
+            <a href="javascript:void(0);" class="btn btn--secondary">
+              Enterprise Plans
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories">
+        <div class="bg-video">
+          <video class="bg-video__vid" autoplay muted loop>
+            <source
+              src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://storage.googleapis.com/coverr-main/webm/Mt_Baker.webm"
+              type="video/webm"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="u-text-center">
+          <h2 class="heading-h2 u-my-8 u-mx-6">
+            What language is most commonly used in programming? Profanity.
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="story">
+            <figure class="story__fig">
+              <img src="assets/nat-8.jpg" alt="Person portrait" />
+              <figcaption class="story__caption">Technical Debt</figcaption>
+            </figure>
+
+            <div class="story__text">
+              <h3 class="heading-h3 u-mb-1">What do programmers inherit?</h3>
+              <p>
+                A man is smoking a cigarette and blowing smoke rings into the
+                air. His girlfriend becomes irritated with the smoke and says,
+                "Can't you see the warning on the cigarette pack? Smoking is
+                hazardous to your health!" To which the man replies, "I am a
+                programmer. We don't worry about warnings; we only worry about
+                errors."
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="story">
+            <figure class="story__fig">
+              <img src="assets/nat-9.jpg" alt="Person portrait" />
+              <figcaption class="story__caption">Foo Bar</figcaption>
+            </figure>
+
+            <div class="story__text">
+              <h3 class="heading-h3 u-mb-1">
+                What is programmer's favorite hangout place?
+              </h3>
+              <p>
+                A programmer goes out with a chick. Next day he tells his friend
+                how the date went: "It was raining, we were soaked. We went to
+                her place where she started to undress before me... Then she
+                threw the wet clothes on the computer" "Wow... what kind of
+                computer?" - the other says
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="u-text-center u-mt-8">
+          <a href="javascript:void(0);" class="btn-text">Beep Boop</a>
+        </div>
+      </section>
+
+      <section class="booking">
+        <div class="row">
+          <div class="booking__container">
+            <div class="booking__form">
+              <h2 class="heading-h2 u-mb-2">Segmentation Fault</h2>
+
+              <form onsubmit="event.preventDefault()" class="form">
+                <div class="form__group">
+                  <label for="booking-name" class="form__label">Name</label>
+                  <input
+                    type="text"
+                    id="booking-name"
+                    class="form__input"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label for="booking-email" class="form__label">Email</label>
+                  <input
+                    type="email"
+                    id="booking-email"
+                    class="form__input"
+                    placeholder="john.doe@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="booking-red"
+                      name="booking-pill"
+                    />
+                    <label for="booking-red" class="form__radio-label">
+                      <span class="form__radio-btn"></span>
+                      Red pill
+                    </label>
+                  </div>
+
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="booking-blue"
+                      name="booking-pill"
+                    />
+                    <label for="booking-blue" class="form__radio-label">
+                      <span class="form__radio-btn"></span>
+                      Blue pill
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form__group u-mt-4">
+                  <button type="submit" class="btn btn--secondary">
+                    Enter &rarr;
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <div class="modal__left">
+          <img src="assets/nat-8.jpg" alt="scenic photo" class="modal__img" />
+          <img src="assets/nat-9.jpg" alt="scenic photo" class="modal__img" />
+        </div>
+        <div class="modal__right">
+          <a href="#tours" class="modal__close">&times;</a>
+          <h2 class="heading-h2 u-mb-2">
+            First rule of programming &ndash; If it works don't fix it.
+          </h2>
+          <h3 class="heading-h3">
+            Second rule of programming &ndash; Don't reinvent the wheel.
+          </h3>
+          <p class="modal__text">
+            The first 90 percent of the code accounts for the first 90 percent
+            of the development time. The remaining 10 percent of the code
+            accounts for the other 90 percent of the development time. — Tom
+            Cargill, Bell Labs
+          </p>
+          <a href="javascript:void(0);" class="btn btn--secondary">
+            C T A &nbsp;&rArr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__logo-container">
+        <img src="assets/logo-green-2x.png" alt="Logo" class="footer__logo" />
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__sitemap">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="javascriot:void(0);" class="footer__link">company</a>
+              </li>
+              <li class="footer__item">
+                <a href="javascriot:void(0);" class="footer__link">contact</a>
+              </li>
+              <li class="footer__item">
+                <a href="javascriot:void(0);" class="footer__link">careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="javascriot:void(0);" class="footer__link">privacy</a>
+              </li>
+              <li class="footer__item">
+                <a href="javascriot:void(0);" class="footer__link">terms</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Based on Jonas Schmedtmann's Udemy course. Designed by
+            <a href="javascriot:void(0);" class="footer__link">
+              Jonas Schmedtmann
+            </a>
+            &nbsp;&copy; 2021 Jonas Schmedtmann, Some Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

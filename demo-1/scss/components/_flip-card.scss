@@ -1,0 +1,190 @@
+.flip-card {
+  perspective: 200rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &:hover &__side {
+    &--front {
+      transform: rotateY(-180deg);
+    }
+
+    &--back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  &__side {
+    background-color: $color-grey;
+    height: 50rem;
+    font-size: 2rem;
+    border-radius: $border-radius;
+    overflow: hidden; // bg img border radius
+    box-shadow: 0.3rem 0.8rem 1rem $color-shadow;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    transition: transform 0.6s ease-in-out;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden; // hides the back side of the card
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__img {
+    height: 40%;
+    background-size: cover;
+    background-blend-mode: hue; // bg img gradient blend
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 55%;
+
+    line-height: initial;
+
+    span {
+      padding: 0 0.8rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+  }
+
+  &__content {
+    height: 60%;
+    width: 80%;
+    color: $color-white;
+    font-size: 1.6rem;
+    margin: auto;
+
+    ul {
+      list-style: none;
+      padding: 2rem 0;
+    }
+
+    li {
+      padding: 1rem 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey;
+      }
+    }
+  }
+
+  // back side
+  &__cta {
+    @include abs-center;
+    color: $color-white;
+
+    &-title {
+      font-size: 3rem;
+    }
+
+    &-desc {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+
+    a {
+      margin-top: 6rem;
+    }
+  }
+}
+
+.tours__card-1 {
+  $card-1-gradient: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary
+  );
+
+  .flip-card__side--front {
+    background-color: $color-primary;
+
+    .flip-card__heading span {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.4),
+        rgba($color-primary, 0.4)
+      );
+    }
+  }
+
+  .flip-card__side--back {
+    background-image: $card-1-gradient;
+  }
+
+  .flip-card__img {
+    background-image: $card-1-gradient, url(../assets/nat-5.jpg);
+  }
+}
+
+.tours__card-2 {
+  $card-2-gradient: linear-gradient(
+    to right bottom,
+    $color-secondary-light,
+    $color-secondary
+  );
+
+  .flip-card__side--front {
+    background-color: $color-secondary;
+
+    .flip-card__heading span {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.4),
+        rgba($color-secondary, 0.4)
+      );
+    }
+  }
+
+  .flip-card__side--back {
+    background-image: $card-2-gradient;
+  }
+
+  .flip-card__img {
+    background-image: $card-2-gradient, url(../assets/nat-6.jpg);
+  }
+}
+
+.tours__card-3 {
+  $card-3-gradient: linear-gradient(
+    to right bottom,
+    $color-tertiary-light,
+    $color-tertiary
+  );
+
+  .flip-card__side--front {
+    background-color: $color-tertiary;
+
+    .flip-card__heading span {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.4),
+        rgba($color-tertiary, 0.4)
+      );
+    }
+  }
+
+  .flip-card__side--back {
+    background-image: $card-3-gradient;
+  }
+
+  .flip-card__img {
+    background-image: $card-3-gradient, url(../assets/nat-7.jpg);
+  }
+}

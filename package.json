@@ -1,0 +1,13 @@
+{
+  "name": "css-playground",
+  "version": "1.0.0",
+  "scripts": {
+    "compile:scss": "./node_modules/sass/sass.js ${npm_config_proj}/scss/main.scss ${npm_config_proj}/css/main.css -wc -s compressed"
+  },
+  "keywords": [],
+  "author": "Don",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.45.1"
+  }
+}

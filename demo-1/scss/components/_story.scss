@@ -1,0 +1,53 @@
+.story {
+  width: 75%;
+  padding: 4rem 4rem 4rem 6rem;
+  margin: 0 auto;
+  background-color: rgba($color-white, 0.6);
+  border-radius: $border-radius;
+  box-shadow: 0.2rem 0.5rem 0.5rem $color-shadow;
+  font-size: $default-fs;
+  transform: skewX(-5deg);
+
+  &__fig {
+    background-color: $color-grey;
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(48% at 50% 50%);
+    transform: translateX(-2rem) skewX(5deg);
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .story__caption {
+      @include abs-center;
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__fig img {
+    transform: scale(1);
+    filter: blur(3px) brightness(0.8);
+  }
+
+  &__text {
+    transform: skewX(5deg);
+  }
+}

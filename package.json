@@ -2,12 +2,18 @@
   "name": "css-playground",
   "version": "1.0.0",
   "scripts": {
-    "compile:scss": "./node_modules/sass/sass.js ${npm_config_proj}/scss/main.scss ${npm_config_proj}/css/main.css -wc -s compressed"
+    "watch:scss": "./node_modules/.bin/sass ${npm_config_proj}/scss/main.scss ${npm_config_proj}/css/main.css -wc",
+    "compile:scss": "./node_modules/.bin/sass ${npm_config_proj}/scss/main.scss ${npm_config_proj}/css/main.comp.css",
+    "prefix:css": "./node_modules/.bin/postcss --use autoprefixer -b 'last 5 versions' ${npm_config_proj}/css/main.comp.css -o ${npm_config_proj}/css/main.prefix.css",
+    "compress:css": "./node_modules/.bin/sass ${npm_config_proj}/css/main.prefix.css ${npm_config_proj}/css/main.css -s compressed",
+    "build:scss": "npm run compile:scss && npm run prefix:css && npm run compress:css"
   },
   "keywords": [],
   "author": "Don",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.1",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.45.1"
   }
 }

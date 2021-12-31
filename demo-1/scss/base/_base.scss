@@ -7,12 +7,42 @@
 }
 
 html {
-  // using % avoids hard-setting user font-size preferences (sets rem to 10px)
+  // using % avoids hard-setting user font-size preferences
+  // default 1rem = 10px
   font-size: 62.5%;
+
+  // 1 rem = 12px
+  @include responsive("large-desktop") {
+    font-size: 75%;
+  }
+
+  // 1rem = 9px
+  @include responsive("tablet-landscape") {
+    font-size: 56.25%;
+  }
+
+  // 1rem = 8px
+  @include responsive("tablet-portrait") {
+    font-size: 50%;
+  }
+
+  // 1 rem = 6px
+  @include responsive("phone") {
+    font-size: 37.5%;
+  }
 }
 
 body {
   padding: 0.5rem;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  @include responsive("tablet-landscape") {
+    padding: 0;
+  }
+
+  ::selection {
+    background-color: $color-primary;
+    color: $color-white;
+  }
 }

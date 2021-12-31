@@ -69,7 +69,7 @@
       </div>
     </header>
 
-    <details>
+    <details class="grid">
       <summary class="u-unselectable">Grid example</summary>
       <section class="float-grid__example">
         <div class="row">
@@ -145,14 +145,20 @@
           <div class="col-1-of-2">
             <div class="composition">
               <img
+                srcset="assets/nat-1.jpg 300w, assets/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 200px, 1000px"
                 src="assets/nat-1-large.jpg"
                 alt="image 1"
                 class="composition__img composition__img--p1"
               /><img
+                srcset="assets/nat-2.jpg 300w, assets/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 200px, 1000px"
                 src="assets/nat-2-large.jpg"
                 alt="image 2"
                 class="composition__img composition__img--p2"
               /><img
+                srcset="assets/nat-3.jpg 300w, assets/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 200px, 1000px"
                 src="assets/nat-3-large.jpg"
                 alt="image 3"
                 class="composition__img composition__img--p3"
@@ -350,7 +356,16 @@
         <div class="row">
           <div class="story">
             <figure class="story__fig">
-              <img src="assets/nat-8.jpg" alt="Person portrait" />
+              <img
+                srcset="
+                  assets/nat-8-small.jpg  600w,
+                  assets/nat-8-mid.jpg   1200w,
+                  assets/nat-8-large.jpg 2000w
+                "
+                sizes="(max-width: 75em) 200px, (max-width: 37.5em) 100px, 1200px"
+                src="assets/nat-8-small.jpg"
+                alt="Person portrait"
+              />
               <figcaption class="story__caption">Technical Debt</figcaption>
             </figure>
 
@@ -371,7 +386,16 @@
         <div class="row">
           <div class="story">
             <figure class="story__fig">
-              <img src="assets/nat-9.jpg" alt="Person portrait" />
+              <img
+                srcset="
+                  assets/nat-9-small.jpg  600w,
+                  assets/nat-9-mid.jpg   1200w,
+                  assets/nat-9-large.jpg 2000w
+                "
+                sizes="(max-width: 75em) 200px, (max-width: 37.5em) 100px, 1200px"
+                src="assets/nat-9-small.jpg"
+                alt="Person portrait"
+              />
               <figcaption class="story__caption">Foo Bar</figcaption>
             </figure>
 
@@ -467,8 +491,20 @@
     <div class="modal" id="modal">
       <div class="modal__content">
         <div class="modal__left">
-          <img src="assets/nat-8.jpg" alt="scenic photo" class="modal__img" />
-          <img src="assets/nat-9.jpg" alt="scenic photo" class="modal__img" />
+          <img
+            srcset="assets/nat-8-mid.jpg 1200w, assets/nat-8-large.jpg 2000w"
+            sizes="(min-width: 75em) 25vw, 1200px"
+            src="assets/nat-8-mid.jpg"
+            alt="scenic photo"
+            class="modal__img"
+          />
+          <img
+            srcset="assets/nat-9-mid.jpg 1200w, assets/nat-9-large.jpg 2000w"
+            sizes="(min-width: 75em) 25vw, 1200px"
+            src="assets/nat-9-mid.jpg"
+            alt="scenic photo"
+            class="modal__img"
+          />
         </div>
         <div class="modal__right">
           <a href="#tours" class="modal__close">&times;</a>
@@ -493,7 +529,21 @@
 
     <footer class="footer">
       <div class="footer__logo-container">
-        <img src="assets/logo-green-2x.png" alt="Logo" class="footer__logo" />
+        <picture>
+          <source
+            srcset="
+              assets/logo-green-small-1x.png 1x,
+              assets/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5rem)"
+          />
+          <img
+            srcset="assets/logo-green-1x.png 1x, assets/logo-green-2x.png 2x"
+            src="assets/logo-green-2x.png"
+            alt="Logo"
+            class="footer__logo"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">

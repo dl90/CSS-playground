@@ -4,9 +4,18 @@
   font-size: 1.4rem;
   color: $color-grey-light;
 
+  @include responsive("tablet-portrait") {
+    padding: 4rem 1rem;
+  }
+
   .row {
     border-top: 1px solid $color-tertiary-light;
     padding-top: 2rem;
+
+    @include responsive("tablet-portrait") {
+      max-width: 95%;
+      text-align: center;
+    }
   }
 
   &__logo-container {
@@ -63,5 +72,10 @@
   &__copyright {
     padding-left: 10%;
     text-align: end;
+
+    @include responsive("tablet-portrait") {
+      padding-left: 0;
+      text-align: inherit;
+    }
   }
 }

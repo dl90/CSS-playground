@@ -25,16 +25,8 @@ $btn__shadow: rgb(56, 56, 56);
 // font-size
 $default-fs: 1.6rem;
 
-// home page
-$home__hero-gradient: linear-gradient(
-  to right bottom,
-  rgba($color-primary, 0.4),
-  rgba($color-tertiary, 0.4),
-  rgba($color-secondary, 0.4)
-);
-$home__color-header-bg-backdrop: rgba(0, 0, 0, 0.164);
-
 // grid
 $grid__max-width: 114rem;
 $grid__gutter-horizontal: 1rem;
 $grid__gutter-vertical: 5rem;
+$grid__gutter-vertical-small: 2rem;

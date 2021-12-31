@@ -1,35 +1,46 @@
 .navigation {
+  $placement-offset: 3rem;
+  $size: min(6vw, 5rem);
+  $phone-size: min(9vw, 6rem);
+
   &__checkbox {
     display: none;
   }
 
   &__btn {
     background-color: $color-white;
-    height: 5rem;
-    width: 5rem;
+    height: $size;
+    width: $size;
     border-radius: 50%;
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: $placement-offset;
+    right: $placement-offset;
     z-index: 6;
     box-shadow: 0.3rem 0.6rem 0.8rem $color-shadow;
     text-align: center;
     cursor: pointer;
+
+    @include responsive("phone") {
+      height: $phone-size;
+      width: $phone-size;
+    }
   }
 
   &__bg {
-    height: 5rem;
-    width: 5rem;
+    height: $size;
+    width: $size;
     border-radius: 50%;
     position: fixed;
-    top: 2rem;
-    right: 2rem;
-    background-image: radial-gradient(
-      rgba($color-black, 0.9),
-      rgba($color-tertiary, 0.9)
-    );
+    top: $placement-offset;
+    right: $placement-offset;
+    background-image: radial-gradient($color-black, rgba($color-tertiary, 0.9));
     z-index: 4;
     transition: all 0.7s cubic-bezier(0.85, 0, 0.15, 1);
+
+    @include responsive("phone") {
+      height: $phone-size;
+      width: $phone-size;
+    }
   }
 
   &__nav {
@@ -88,9 +99,10 @@
 
   // menu open/close
   &__checkbox:checked ~ .navigation__bg {
-    width: 250vw;
-    height: 250vh;
-    transform: translate(50vw, -100vh);
+    $mv: max(100vw, 100vh);
+    width: $mv;
+    height: $mv;
+    transform: translate(50vw, -50vh) scale(5);
   }
 
   &__checkbox:checked ~ .navigation__nav {

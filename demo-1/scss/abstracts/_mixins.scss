@@ -12,3 +12,42 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/*
+  # breakpoints
+
+  0-600px: phone
+  601-900px: tablet portrait
+  901-1200px: tablet landscape
+  1201-2000px: desktop
+  2001+: large desktop
+
+  -rem and em in media queries not affected by base font definition (html { fonts-size: 62.5%; })
+  -defaults to 16px or user-defined browser font-size
+  -use em in media queries
+*/
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == "phone" {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet-portrait" {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet-landscape" {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  } @else if $breakpoint == "desktop" {
+    // default
+    @media only screen and (max-width: 125em) {
+      @content;
+    }
+  } @else if $breakpoint == "large-desktop" {
+    @media only screen and (min-width: 125em) {
+      @content;
+    }
+  }
+}

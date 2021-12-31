@@ -8,15 +8,31 @@
   font-size: $default-fs;
   transform: skewX(-5deg);
 
+  @include responsive("tablet-portrait") {
+    width: 100%;
+  }
+
+  @include responsive("phone") {
+    transform: none;
+  }
+
   &__fig {
+    $fig-size: 15rem;
+
     background-color: $color-grey;
-    width: 15rem;
-    height: 15rem;
+    width: $fig-size;
+    height: $fig-size;
     float: left;
     clip-path: circle(50% at 50% 50%);
     shape-outside: circle(48% at 50% 50%);
     transform: translateX(-2rem) skewX(5deg);
     position: relative;
+
+    @include responsive("phone") {
+      transform: translateX(-2rem);
+      width: min(20vw, $fig-size);
+      height: min(20vw, $fig-size);
+    }
 
     img {
       height: 100%;
@@ -49,5 +65,11 @@
 
   &__text {
     transform: skewX(5deg);
+  }
+
+  @include responsive("phone") {
+    &__text {
+      transform: none;
+    }
   }
 }

@@ -14,5 +14,9 @@
     width: 100%;
     object-fit: cover;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+
+    @include responsive("tablet-portrait") {
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+    }
   }
 }

@@ -31,3 +31,26 @@
 | em (font-size)        | parent font-size           |
 | rem (width/font-size) | root font-size             |
 | vh/vw                 | viewport height/width      |
+
+```html
+<!-- html responsive images -->
+<picture>
+  <!-- art direction: sets different picture source based on media query -->
+  <source
+    srcset="img/logo-mobile-1x.png 1x, img/logo-mobile-2x.png 2x"
+    media="(max-width: 600px)"
+  />
+  <!-- default with density switching (srcset) based on DPR -->
+  <img
+    srcset="img/logo-default-1x.png 1x, img/logo-default-2x 2x"
+    src="img/logo-default-2x"
+  />
+</picture>
+```
+
+```scss
+// graceful degradation
+@supports (display: grid) {
+  display: grid;
+}
+```

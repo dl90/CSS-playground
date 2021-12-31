@@ -1,6 +1,10 @@
 .composition {
   position: relative;
 
+  @include responsive("tablet-portrait") {
+    padding: 5rem 0;
+  }
+
   &__img {
     z-index: 1;
     width: 55%;
@@ -10,30 +14,63 @@
     transition: all 0.3s;
     outline-offset: 1.5rem;
 
+    @include responsive("tablet-portrait") {
+      position: relative;
+      float: left;
+      width: calc(100% / 3);
+    }
+
     &--p1 {
       left: 0;
       top: -2rem;
+
+      @include responsive("tablet-portrait") {
+        top: 1rem;
+        transform: scale(1.2) rotate(-5deg);
+      }
     }
 
     &--p2 {
       right: 0;
       top: 5rem;
+
+      @include responsive("tablet-portrait") {
+        z-index: 2;
+        top: -2rem;
+        transform: scale(1.3);
+      }
     }
 
     &--p3 {
       left: 20%;
       top: 12rem;
+
+      @include responsive("tablet-portrait") {
+        top: -1rem;
+        left: 0;
+        transform: scale(1.2) rotate(5deg);
+      }
     }
 
     &:hover {
-      z-index: 2;
+      z-index: 3;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0.3rem 1.2rem 1.5rem $color-shadow;
       outline: 1.5rem solid rgba($color-tertiary, 0.5);
+
+      @include responsive("tablet-portrait") {
+        outline: none;
+        transform: scale(1.4);
+        box-shadow: 0.4rem 1.5rem 1.8rem $color-shadow;
+      }
     }
   }
 
   &:hover &__img:not(:hover) {
     transform: scale(0.97);
+
+    @include responsive("tablet-portrait") {
+      transform: scale(1.1);
+    }
   }
 }

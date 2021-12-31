@@ -10,70 +10,48 @@
 @import "../components/form";
 @import "../components/modal";
 
-.heading-h1 {
-  color: $color-white;
-  margin-bottom: 4rem;
-  // backface-visibility: hidden;
-
-  &--main {
-    display: block;
-    font-size: 5.8rem;
-    font-weight: 400;
-
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-in-out;
-  }
-
-  &--sub {
-    display: block;
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 1.5rem;
-
-    animation: moveInRight 1s ease-in-out 0.7s;
-    animation-fill-mode: backwards;
-  }
-}
-
-.heading-h2 {
-  color: $color-white;
-  display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    $color-primary 70%,
-    $color-secondary
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: all 0.5s;
-
-  &:hover {
-    transform: skewY(-2deg) skewX(-2deg) scale(1.1);
-    text-shadow: 0.4rem 0.4rem 0.5rem $color-shadow;
-  }
-}
-
-.heading-h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
+// home page
+$home__hero-gradient: linear-gradient(
+  to right bottom,
+  rgba($color-primary, 0.4),
+  rgba($color-tertiary, 0.4),
+  rgba($color-secondary, 0.4)
+);
+$home__color-header-bg-backdrop: rgba(0, 0, 0, 0.164);
 
 .header {
-  height: 95vh;
+  height: 100vh;
   position: relative;
-  background-image: $home__hero-gradient, url(../assets/hero.jpg);
+  background-image: $home__hero-gradient, url(../assets/hero-small.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    height: 95vh;
+
+    @include responsive("phone") {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (max-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary, 0.4),
+        rgba($color-secondary, 0.4)
+      ),
+      url(../assets/hero.jpg);
+  }
 
   &__logo-container {
     position: absolute;
-    top: 15%;
+    top: 5%;
     left: 5%;
   }
 
@@ -87,6 +65,12 @@
     top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include responsive("tablet-portrait") {
+      width: 70vw;
+    }
+    @include responsive("phone") {
+      width: 90vw;
+    }
 
     &-bg {
       padding: 20px;
@@ -103,7 +87,7 @@
   }
 }
 
-details {
+.grid {
   font-size: 2rem;
   text-align: center;
   margin-top: -3rem;
@@ -122,19 +106,38 @@ details {
   &[open] summary ~ * {
     animation: sweep 1s ease;
   }
+
+  @include responsive("phone") {
+    margin-top: -2rem;
+    font-size: 1.5rem;
+  }
 }
 
 section.about {
   background-color: $color-off-white;
   padding: 12rem 0;
   margin-top: -10rem;
+
+  @include responsive("tablet-landscape") {
+    .row {
+      padding: 0 2rem;
+    }
+  }
+
+  @include responsive("tablet-portrait") {
+    padding: 12rem 0 15rem 0;
+
+    .row {
+      max-width: 80%;
+    }
+  }
 }
 
 section.features {
   height: 80rem;
   display: flex;
   align-items: center;
-  background-image: $home__hero-gradient, url(../assets/nat-4.jpg);
+  background-image: $home__hero-gradient, url(../assets/nat-4-large.jpg);
   background-size: cover;
   margin-top: -5rem;
 
@@ -142,17 +145,60 @@ section.features {
   & > * {
     transform: skewY(4deg);
   }
+
+  @include responsive("tablet-landscape") {
+    @media (max-resolution: 192dpi), (max-resolution: 1x) {
+      background-image: $home__hero-gradient, url(../assets/nat-4-mid.jpg);
+    }
+
+    .row {
+      padding: 0 2rem;
+    }
+  }
+
+  @include responsive("tablet-portrait") {
+    height: 110rem;
+  }
 }
 
 section.tours {
   background-color: $color-off-white;
   padding: 12rem 0 5rem 0;
   margin-top: -10rem;
+
+  @include responsive("tablet-landscape") {
+    .row {
+      padding: 0 2rem;
+    }
+  }
+
+  @include responsive("phone") {
+    .row {
+      padding: 0;
+      max-width: 70%;
+
+      [class^="col-"] {
+        margin-bottom: 4rem;
+      }
+    }
+  }
 }
 
 section.stories {
   padding: 5rem 0 10rem 0;
   position: relative;
+
+  @include responsive("tablet-portrait") {
+    .row {
+      max-width: 70%;
+    }
+  }
+
+  @include responsive("phone") {
+    .row {
+      max-width: 85%;
+    }
+  }
 }
 
 section.booking {
@@ -163,21 +209,47 @@ section.booking {
     $color-secondary
   );
 
+  @mixin booking($width) {
+    .booking__container {
+      background-image: linear-gradient(
+          100deg,
+          rgba($color-white, 0.7) 0%,
+          rgba($color-white, 0.7) $width,
+          transparent $width
+        ),
+        url(../assets/nat-10.jpg);
+    }
+
+    .booking__form {
+      width: $width;
+    }
+  }
+
+  @include booking(50%);
+
   .booking__container {
-    background-image: linear-gradient(
-        100deg,
-        rgba($color-white, 0.7) 0%,
-        rgba($color-white, 0.7) 50%,
-        transparent 50%
-      ),
-      url(../assets/nat-10.jpg);
     background-size: cover;
     border-radius: $border-radius;
     box-shadow: 0.4rem 1rem 2rem $color-shadow;
   }
 
   .booking__form {
-    width: 50%;
     padding: 3rem 7rem;
+  }
+
+  @include responsive("tablet-landscape") {
+    @include booking(70%);
+  }
+
+  @include responsive("tablet-portrait") {
+    @include booking(80%);
+
+    .row {
+      max-width: 90%;
+    }
+  }
+
+  @include responsive("phone") {
+    @include booking(100%);
   }
 }

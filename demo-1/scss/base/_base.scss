@@ -10,6 +10,7 @@ html {
   // using % avoids hard-setting user font-size preferences
   // default 1rem = 10px
   font-size: 62.5%;
+  box-sizing: border-box;
 
   // 1 rem = 12px
   @include responsive("large-desktop") {
@@ -34,7 +35,6 @@ html {
 
 body {
   padding: 0.5rem;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 
   @include responsive("tablet-landscape") {

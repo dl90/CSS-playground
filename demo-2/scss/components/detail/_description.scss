@@ -1,0 +1,82 @@
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.list {
+  margin: 2rem 0;
+  padding: 2rem;
+  list-style: none;
+  border-top: var(--border);
+  border-bottom: var(--border);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.5rem;
+    padding: 0 2rem;
+    position: relative;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+
+    // older browsers
+    background-image: url(../assets/chevron-thin-right.svg);
+    background-size: cover;
+
+    // newer browsers
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../assets/chevron-thin-right.svg);
+      mask-image: url(../assets/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-image: none;
+    }
+  }
+}
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+    display: flex;
+  }
+
+  &__dp {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 3px white solid;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:not(:last-of-type) {
+      margin-right: -1.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.1) translateY(-0.5rem);
+      border: 3px solid var(--color-primary);
+    }
+  }
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <title>Trip &mdash; Booking app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="assets/logo.png" alt="Logo" class="logo" />
+        <form onsubmit="event.preventDefault()" class="search">
+          <input type="text" class="search__input" placeholder="search" />
+          <button class="search__btn">
+            <svg class="search__btn--icon">
+              <use xlink:href="assets/sprite.svg#icon-search" />
+            </svg>
+          </button>
+        </form>
+        <nav class="user-nav">
+          <div class="user-nav__icon-container">
+            <svg class="user-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-bookmark" />
+            </svg>
+            <span class="user-nav__notification">2</span>
+          </div>
+          <div class="user-nav__icon-container">
+            <svg class="user-nav__icon">
+              <use xlink:href="assets/sprite.svg#icon-bubbles" />
+            </svg>
+            <span class="user-nav__notification">3</span>
+          </div>
+          <div class="user-nav__user">
+            <img
+              src="assets/user.jpg"
+              alt="username"
+              class="user-nav__user-dp"
+            />
+            <span class="user-nav__user-name">John</span>
+          </div>
+        </nav>
+      </header>
+      <div class="content">
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item active">
+              <a href="javascript:void(0);" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="assets/sprite.svg#icon-home" />
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="javascript:void(0);" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="assets/sprite.svg#icon-airplane" />
+                </svg>
+                <span>Air</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="javascript:void(0);" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="assets/sprite.svg#icon-truck" />
+                </svg>
+                <span>Car Rental</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="javascript:void(0);" class="side-nav__link">
+                <svg class="side-nav__icon">
+                  <use xlink:href="assets/sprite.svg#icon-map2" />
+                </svg>
+                <span>Map</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy; 2021 Trip. All rights reserved.</div>
+        </nav>
+        <main class="view">
+          <div class="gallery">
+            <figure class="gallery__item">
+              <img
+                srcset="
+                  assets/hotel-1-1500.jpg 1500w,
+                  assets/hotel-1-800.jpg   800w,
+                  assets/hotel-1-400.jpg   400w
+                "
+                sizes="(max-width: 50em) 40vw, 1500px"
+                src="assets/hotel-1-1500.jpg"
+                alt="Photo of hotel"
+                class="gallery__img"
+              />
+            </figure>
+            <figure class="gallery__item">
+              <img
+                srcset="
+                  assets/hotel-2-1500.jpg 1500w,
+                  assets/hotel-2-800.jpg   800w,
+                  assets/hotel-2-400.jpg   400w
+                "
+                sizes="(max-width: 50em) 40vw, 1500px"
+                src="assets/hotel-2-1500.jpg"
+                alt="Photo of hotel"
+                class="gallery__img"
+              />
+            </figure>
+            <figure class="gallery__item">
+              <img
+                srcset="
+                  assets/hotel-3-1500.jpg 1500w,
+                  assets/hotel-3-800.jpg   800w,
+                  assets/hotel-3-400.jpg   400w
+                "
+                sizes="(max-width: 50em) 40vw, 1500px"
+                src="assets/hotel-3-1500.jpg"
+                alt="Photo of hotel"
+                class="gallery__img"
+              />
+            </figure>
+          </div>
+
+          <div class="overview">
+            <h1 class="overview__h1">Hotel Las Palmas</h1>
+            <div class="overview__stars">
+              <svg class="overview__star-icon">
+                <use xlink:href="assets/sprite.svg#icon-star-full" />
+              </svg>
+              <svg class="overview__star-icon">
+                <use xlink:href="assets/sprite.svg#icon-star-full" />
+              </svg>
+              <svg class="overview__star-icon">
+                <use xlink:href="assets/sprite.svg#icon-star-full" />
+              </svg>
+              <svg class="overview__star-icon">
+                <use xlink:href="assets/sprite.svg#icon-star-full" />
+              </svg>
+              <svg class="overview__star-icon">
+                <use xlink:href="assets/sprite.svg#icon-star-half" />
+              </svg>
+            </div>
+            <div class="overview__location">
+              <svg class="overview__location-icon">
+                <use xlink:href="assets/sprite.svg#icon-location" />
+              </svg>
+              <button class="btn-inline">Las Palmas, Spain</button>
+            </div>
+            <div class="overview__rating">
+              <div class="overview__rating-average">8.8</div>
+              <div class="overview__rating-count">456 votes</div>
+            </div>
+          </div>
+
+          <div class="detail">
+            <div class="description">
+              <p class="paragraph">
+                Being a Programmer and watching someone HACK a computer on a TV
+                show is like a nurse and watching someone in the movie take
+                blood with a carrot.
+              </p>
+              <p class="paragraph">
+                One thing I know is that a computer science major didn't name
+                the original pokemon. Otherwise, charmander would evolve into
+                stringmander.
+              </p>
+              <p class="paragraph">
+                Once all programming languages went to a party. Guess who paid
+                the bill? Of course, PHP. Beacause PHP has many $.
+              </p>
+              <ul class="list">
+                <li class="list__item">I never tell the same joke twice.</li>
+                <li class="list__item">I have a DRY sense of humor.</li>
+                <li class="list__item">Why don't bachelors like Git?</li>
+                <li class="list__item">Because they are afraid to commit.</li>
+                <li class="list__item">
+                  What's a compiler developer's favorite spice?
+                </li>
+                <li class="list__item">Parsley.</li>
+                <li class="list__item">Why do Java developers wear glasses?</li>
+                <li class="list__item">Because they don't C#!</li>
+              </ul>
+              <div class="recommend">
+                <p class="recommend__count">
+                  Jane and 3 other friends recommend this hotel.
+                </p>
+                <div class="recommend__friends">
+                  <img
+                    src="assets/user-2.jpg"
+                    alt="user display picture"
+                    class="recommend__dp"
+                  />
+                  <img
+                    src="assets/user-3.jpg"
+                    alt="user display picture"
+                    class="recommend__dp"
+                  />
+                  <img
+                    src="assets/user-4.jpg"
+                    alt="user display picture"
+                    class="recommend__dp"
+                  />
+                  <img
+                    src="assets/user-5.jpg"
+                    alt="user display picture"
+                    class="recommend__dp"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews">
+              <figure class="review">
+                <blockquote class="review__text">
+                  I have a joke about stackoverflow but you will say it's
+                  duplicated
+                </blockquote>
+                <figcaption class="review__user">
+                  <img
+                    src="assets/user-1.jpg"
+                    alt="display picture"
+                    class="review__user-dp"
+                  />
+                  <div class="review__user-container">
+                    <p class="review__user-name">Jason S.</p>
+                    <p class="review__user-date">Jan 1, 2019</p>
+                  </div>
+                  <div class="review__rating">7.8</div>
+                </figcaption>
+              </figure>
+
+              <figure class="review">
+                <blockquote class="review__text">
+                  Data scientists should be charged with animal trafficking and
+                  animal abuse because they import pandas and feed them to
+                  python.
+                </blockquote>
+                <figcaption class="review__user">
+                  <img
+                    src="assets/user-6.jpg"
+                    alt="display picture"
+                    class="review__user-dp"
+                  />
+                  <div class="review__user-container">
+                    <p class="review__user-name">Ashley N.</p>
+                    <p class="review__user-date">Dec 23, 2020</p>
+                  </div>
+                  <div class="review__rating">8.6</div>
+                </figcaption>
+              </figure>
+
+              <button class="btn-inline">Show more <span>&rarr;</span></button>
+            </div>
+          </div>
+
+          <div class="cta">
+            <h2 class="cta__title">
+              Why was the developer unhappy at their job? They wanted arrays.
+            </h2>
+            <button class="btn">
+              <span class="btn__visible">Book now</span>
+              <span class="btn__hidden">Only 4 rooms left</span>
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

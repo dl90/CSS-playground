@@ -1,0 +1,83 @@
+.review {
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-900) {
+    margin-bottom: 1rem;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-600) {
+    width: 100%;
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
+
+    &::before,
+    &::after {
+      position: absolute;
+      font-family: sans-serif;
+      font-size: 20rem;
+      line-height: 1;
+      color: var(--color-grey-light-2);
+      z-index: -1;
+    }
+
+    &::before {
+      content: "\201C";
+      top: -6rem;
+      left: -4rem;
+    }
+
+    &::after {
+      content: "\201D";
+      bottom: -16rem;
+      right: -4rem;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-dp {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__user-container {
+    margin: 0 auto 0 1rem;
+  }
+
+  &__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-gray-dark-3);
+  }
+
+  &__rating {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--color-primary);
+  }
+}

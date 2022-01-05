@@ -1,0 +1,74 @@
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  background-color: $color-primary;
+  grid-row: 1/-1;
+  z-index: 2;
+
+  @media only screen and (max-width: $bp-1000) {
+    grid-column: full-start / full-end;
+    grid-row: 1 / 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 0;
+
+    @media screen and (max-width: $bp-1000) {
+      padding: 0 2rem;
+      height: 100%;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.nav-btn {
+  border: none;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.6rem;
+  background: none;
+  border-radius: 1rem;
+
+  &:hover {
+    outline: none;
+    background-color: $color-primary-dark;
+  }
+}
+
+.nav-btn--icon {
+  background-color: white;
+  height: 2px;
+  display: block;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: 0.5em;
+  }
+
+  &::after {
+    bottom: 0.5em;
+  }
+}
